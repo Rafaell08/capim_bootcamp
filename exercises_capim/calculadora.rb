@@ -1,8 +1,6 @@
-result = ""
 
 loop do
-    puts result
-    puts "Selecione um operador para calculo: "
+    puts "Selecione um operador para calcular: "
     puts "1 - Soma."
     puts "2 - Subtração."
     puts "3 - Divisão."
@@ -12,39 +10,36 @@ loop do
 
     option = gets.chomp.to_i
 
+    if option == 0
+        break
+    end
+
     num1 = "Digite o primeiro número: "
     num2 = "Digite o segundo número: "
-    vfinal = "O resultado da"
+    vfinal = "O resultado final é: "
 
-    if option == 1
-        print "#{num1}"
-        a = gets.chomp.to_i
-        print "#{num2}"
-        b = gets.chomp.to_i
-        result = "#{vfinal} soma é: #{a + b}"
+    print "#{num1}"
+    a = gets.chomp.to_f
+    print "#{num2}"
+    b = gets.chomp.to_f
+
+    result = 0
+
+    result = if option == 1
+        result = a + b
+        puts "#{vfinal} #{result}"
     elsif option == 2
-        print "#{num1}"
-        a = gets.chomp.to_i
-        print "#{num2}"
-        b = gets.chomp.to_i
-        result = "#{vfinal} subtração é: #{a - b}"
+        result = a - b
+        puts "#{vfinal} #{result}"
     elsif option == 3
-        print "#{num1}"
-        a = gets.chomp.to_i
-        print "#{num2}"
-        b = gets.chomp.to_i
-        result = "#{vfinal} divisão é: #{a / b}"
+        result = a / b
+        puts "#{vfinal} #{result}"
     elsif option == 4
-        print "#{num1}"
-        a = gets.chomp.to_i
-        print "#{num2}"
-        b = gets.chomp.to_i
-        result = "#{vfinal} multiplicação é: #{a * b}"
-    elsif option == 0
-        break
+        result = a * b
+        puts "#{vfinal} #{result}"
     else
-        result = "Opção inválida."
+        puts 'Opção inválida.'
     end
     # Limpar o terminal para ficar menos poluído
-    system "clear"
+    # system "clear"
 end
