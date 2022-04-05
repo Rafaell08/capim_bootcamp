@@ -40,6 +40,4 @@ loop do
     else
         puts 'Opção inválida.'
     end
-    # Limpar o terminal para ficar menos poluído
-    # system "clear"
 end
