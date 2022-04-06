@@ -23,9 +23,7 @@ loop do
     print "#{num2}"
     b = gets.chomp.to_f
 
-    result = 0
-
-    result = if option == 1
+    if option == 1
         result = a + b
         puts "#{vfinal} #{result}"
     elsif option == 2
