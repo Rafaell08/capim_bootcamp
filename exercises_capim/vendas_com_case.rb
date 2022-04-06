@@ -19,7 +19,6 @@
     z = (a * 0.05)
 
 case calc
-
 when 1
     result = a - x
     puts "#{vfinal} #{result}"
