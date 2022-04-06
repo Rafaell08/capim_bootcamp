@@ -25,9 +25,7 @@ loop do
     y = (a * 0.25)
     z = (a * 0.05)
     
-    result = 0
-    
-    result = if option == 1
+    if option == 1
         result = a - x
         puts "#{vfinal} #{result}"
     elsif option == 2
