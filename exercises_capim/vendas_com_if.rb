@@ -27,13 +27,13 @@ loop do
     
     if option == 1
         result = a - x
-        puts "#{vfinal} #{result}"
+        puts "#{vfinal} #{result.round(2)}"
     elsif option == 2
         result = a - y
-        puts "#{vfinal} #{result}"
+        puts "#{vfinal} #{result.round(2)}"
     elsif option == 3
         result = a - z
-        puts "#{vfinal} #{result}"
+        puts "#{vfinal} #{result.round(2)}"
     else
         puts 'Opção inválida.'
     end
