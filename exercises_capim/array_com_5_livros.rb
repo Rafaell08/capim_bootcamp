@@ -7,7 +7,9 @@ puts "Temos esses livros: #{books}"
 
 puts "Caso queira adicionar mais livros, fique à vontade."
 
-books.push(gets.chomp) do |insert|
+add = gets.chomp
+
+books.push(add) do |insert|
     puts "#{insert}"
 end
 
