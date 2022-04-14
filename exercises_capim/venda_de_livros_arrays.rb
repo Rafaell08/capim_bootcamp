@@ -16,6 +16,6 @@ y = 29.90 - ( a * 0.30 )
 orders.push(get0, get1, get2)
 books.delete_if { |books| books.to_s.start_with?(get0, get1, get2) }
 
-puts "O primeiro livro foi: #{orders.to_s[get0]}; Seu valor original é: R$#{a} e com desconto ficou R$#{x.round(2)}."
-puts "O segundo livro foi: #{orders.to_s[get1]}; Seu valor original é: R$#{a} e com desconto ficou R$#{y.round(2)}."
-puts "O terceiro livro foi: #{orders.to_s[get2]}; Seu valor original é: R$#{a} mas o teceiro não tem desconto. =("
+puts "O primeiro livro foi: #{orders.to_s[get0]}, seu valor original é R$#{a} o desconto foi de 45% e o valor final foi R$#{x.round(2)}."
+puts "O segundo livro foi: #{orders.to_s[get1]}, seu valor original é R$#{a} o desconto foi de 30% e o valor final foi R$#{y.round(2)}."
+puts "O terceiro livro foi: #{orders.to_s[get2]}, seu valor original é R$#{a} mas o teceiro não tem desconto. =("
