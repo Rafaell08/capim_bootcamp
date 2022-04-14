@@ -19,15 +19,9 @@ end
 books = ["Odisséia - Homero", "Hamlet – William Shakespeare", "Guerra e Paz – Leon Tolstoi", "Morte e Vida Severina - João Cabral de Melo Neto"]
 orders = []
 
-puts "Temos três livros: #{books}"
-puts "O que você deseja fazer?"
-puts "1 - Adicionar livro."
-puts "2 - Vender livro."
-print "Opção: "
-
-option = gets.chomp.to_i
-
-print "Insira o livro que será adicionado ou vendido: "
+puts "Temos quatro livros: #{books}"
+puts "Qual dos livros acima você deseja vender?"
+puts "Insira os livros que serão vendidos: "
 get1 = gets.chomp
 get2 = gets.chomp
 get3 = gets.chomp
@@ -36,18 +30,9 @@ get3 = gets.chomp
 # x = 29.90 - ( a * 0.45 )
 # y = 29.90 - ( a * 0.30 )
 
-case option
-when 1
-    books.push(get)
-    puts "Livros atualizados: #{books}"
-when 2
-    puts "Temos esses livros à venda: #{books}"
-    orders.push(get1, get2, get3)
-    books.delete_if { |books| books.to_s.start_with?(get1, get2, get3) }
-    # books.delete_if { |books| books.to_s.include?(get) }
-
-    puts "O livro vendido foi: #{orders}"
-    puts "Livros restantes: #{books}"
-else
-    puts 'Opção inválida.'
-end
+orders.push(get1, get2, get3)
+books.delete_if { |books| books.to_s.start_with?(get1, get2, get3) }
+# books.delete_if { |books| books.to_s.include?(get) }
+    
+puts "O livro vendido foi: #{orders}"
+puts "Livros restantes: #{books}"
