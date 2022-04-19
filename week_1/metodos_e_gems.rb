@@ -22,6 +22,7 @@ end
 # last_name = 'Cavassana'
 
 talk('Rafael', 'Cavassana')
+talk('Jão', 'Jão')
 
 puts s
 
@@ -64,7 +65,7 @@ b = 1
 
 result = compare(a, b)
 
-puts "Um teste usando return que no código esta retornando true: #{result}"
+puts "Coloquei um return que está 'false' mas o código sem retornaria 'true'. Quando se tem um return no código ele para no mesmo. O resultado da: #{result}"
 
 puts s
 
