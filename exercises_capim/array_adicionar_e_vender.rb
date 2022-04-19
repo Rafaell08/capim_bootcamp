@@ -20,7 +20,7 @@ when 1
 when 2
     puts "Temos esses livros à venda: #{books}"
     orders.push(get)
-    books.delete_at(books.find_index(get))
+    books.delete_if { |books| books.start_with?(get) }
 
     puts "O livro vendido foi: #{orders}"
     puts "Livros restantes: #{books}"
