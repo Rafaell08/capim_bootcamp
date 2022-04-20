@@ -1,9 +1,6 @@
 require "cpf_cnpj"
 
-def valid_cpf
-  print "Insira CPF: "
-  cpf = gets.chomp
-
+def valid_cpf(cpf)
   if CPF.valid?(cpf, strict: true)
     puts "O CPF é verdadeiro!"
   else
@@ -11,10 +8,7 @@ def valid_cpf
   end
 end
 
-def valid_cnpj
-  print "Insira CNPJ: "
-  cnpj = gets.chomp
-
+def valid_cnpj(cnpj)
   if CNPJ.valid?(cnpj, strict: true)
     puts "O CNPJ é verdadeiro!"
   else
@@ -31,9 +25,15 @@ option = gets.chomp.to_i
 
 case option
 when 1
-  valid_cpf
+  print "Insira CPF: "
+  cpf = gets.chomp
+
+  valid_cpf(cpf)
 when 2
-  valid_cnpj
+  print "Insira CNPJ: "
+  cnpj = gets.chomp
+
+  valid_cnpj(cnpj)
 else
   puts "Opção inválida!"
 end
