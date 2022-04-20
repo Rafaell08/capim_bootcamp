@@ -4,7 +4,7 @@ def valid_cpf
   print "Insira CPF: "
   cpf = gets.chomp
 
-  if CPF.valid?("#{cpf}")
+  if CPF.valid?(cpf, strict: true)
     puts "O CPF é verdadeiro!"
   else
     puts "O CPF é falso!"
@@ -15,7 +15,7 @@ def valid_cnpj
   print "Insira CNPJ: "
   cnpj = gets.chomp
 
-  if CNPJ.valid?("#{cnpj}")
+  if CNPJ.valid?(cnpj, strict: true)
     puts "O CNPJ é verdadeiro!"
   else
     puts "O CNPJ é falso!"
@@ -34,4 +34,6 @@ when 1
   valid_cpf
 when 2
   valid_cnpj
+else
+  puts "Opção inválida!"
 end
