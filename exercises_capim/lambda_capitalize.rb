@@ -13,12 +13,9 @@ puts "-" * 20
 
 # Apenas fiz de uma forma diferente usando
 
-class CapitalizeName
-    def capitalize(name)
-        puts "#{name.capitalize}"
-    end
+def capitalize(name)
+    puts "#{name.capitalize}"
 end
 
-name_cap = CapitalizeName.new
-name_cap.capitalize("formAS")
-name_cap.capitalize("atrIbutOS")
+capitalize("formAS")
+capitalize("atrIbutOS")
